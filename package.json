@@ -1,0 +1,36 @@
+{
+  "name": "plato",
+  "version": "1.1.1",
+  "description": "Plato",
+  "scripts": {
+    "prisma:pull": "npx prisma db pull --schema=./prisma/plato/scheme.prisma",
+    "prisma:generate": "npx prisma generate --schema=./prisma/plato/scheme.prisma",
+    "prisma:migrate-dev": "npx prisma migrate dev --schema=./prisma/plato/scheme.prisma",
+    "prisma:migrate-deploy": "npx prisma migrate deploy --schema=./prisma/plato/scheme.prisma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaferna/plato.git"
+  },
+  "author": "aaferna",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/aaferna/plato/issues"
+  },
+  "homepage": "https://github.com/aaferna/plato#readme",
+  "dependencies": {
+    "@prisma/client": "^5.8.0",
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "log4js": "^6.6.1",
+    "luxon": "^3.0.1",
+    "node-schedule": "^2.1.1",
+    "prisma": "^5.8.0",
+    "sqlite3": "^5.1.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

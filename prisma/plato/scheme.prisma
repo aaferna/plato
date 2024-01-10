@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./client"
+}
+
+datasource manager {
+  provider = "sqlite"
+  url      = "file:../../db/plato.db"
+}
+
+model Tarea {
+  idtarea          Int      @id @default(autoincrement())
+  nombre           String
+  paq_funcion      String
+  tiempo_ejecucion String
+  activo           Int
+  date             DateTime @default(now()) @updatedAt
+  puntero          String?
+}
